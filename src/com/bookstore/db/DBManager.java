@@ -15,7 +15,7 @@ public class DBManager {
 	 * 用来执行查询语句
 	 */
 	public ResultSet query(String sql) {
-		String url = "jdbc:mysql://localhost:3306/bookstore";
+		String url = "jdbc:mysql://localhost:3306/graduation_bookstore";
 		try {
 			Class.forName("com.mysql.jdbc.Driver");
 			con = DriverManager.getConnection(url,"root", "123456");
