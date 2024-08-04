@@ -10,12 +10,12 @@ public class DBManager {
 	private Connection con;
 	private Statement sta;
 	private ResultSet rs;
-	
+
 	/**
 	 * 用来执行查询语句
 	 */
 	public ResultSet query(String sql) {
-		String url = "jdbc:mysql://localhost:3306/graduation_bookstore";
+		String url = "jdbc:mysql://localhost:3306/graduation_41_bookstore";
 		try {
 			Class.forName("com.mysql.jdbc.Driver");
 			con = DriverManager.getConnection(url,"root", "123456");
@@ -28,7 +28,7 @@ public class DBManager {
 		}
 		return rs;
 	}
-	
+
 
 
 	/**
@@ -68,11 +68,11 @@ public class DBManager {
 			if (sta != null) {
 				sta.close();
 				sta = null;
-			}	
+			}
 			if (con != null) {
 				con.close();
 				con = null;
-			}	
+			}
 		} catch (Exception e) {
 			System.out.println("关闭资源时发生异常");
 			e.printStackTrace();
